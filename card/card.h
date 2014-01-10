@@ -1,6 +1,6 @@
 #ifndef CARD_H
 #define CARD_H
-
+#include <string>
 using namespace std;
 
 // 1 is Ace, King is 13
@@ -9,11 +9,11 @@ using namespace std;
 class card
 {
 	public:
-		card(int face, int suit);
+		card(int Face, int Suit);
 
 		int getFace();
 		int getSuit();
-
+		string stringConvert();
 		void display();
 	private:
 		int face;

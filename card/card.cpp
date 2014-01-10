@@ -1,6 +1,6 @@
 #include <iostream>
-
-#include "card.h"
+#include "player.h"
+#include "sampleCard.h"
 using namespace std;
 
 card::card(int Face, int Suit)
@@ -24,66 +24,126 @@ void card::display()
 	switch(face)
 	{
 		case 1:
-			cout << "Ace of ";
+			cout << "ace of ";
 			break;
 		case 2:
-			cout << "Two of ";
+			cout << "two of ";
 			break;
 		case 3:
-			cout << "Three of ";
+			cout << "three of ";
 			break;
 		case 4:
-			cout << "Four of ";
+			cout << "four of ";
 			break;
 		case 5:
-			cout << "Five of ";
+			cout << "five of ";
 			break;
 		case 6:
-			cout << "Six of ";
+			cout << "six of ";
 			break;
 		case 7:
-			cout << "Seven of ";
+			cout << "seven of ";
 			break;
 		case 8:
-			cout << "Eight of ";
+			cout << "eight of ";
 			break;
 		case 9:
-			cout << "Nine of ";
+			cout << "nine of ";
 			break;
 		case 10:
-			cout << "Ten of ";
+			cout << "ten of ";
 			break;
 		case 11:
-			cout << "Jack of ";
+			cout << "jack of ";
 			break;
 		case 12:
-			cout << "Queen of ";
+			cout << "queen of ";
 			break;
 		case 13:
-			cout << "King of ";
+			cout << "king of ";
 			break;
 	}
 
 
 	switch (suit)
 	{
-		cout << "HEREEEEEEEEEEEE" << endl;
 		case 1:
-			cout << "Diamonds " << endl;
+			cout << "diamonds";
 			break;
 		case 2:
-			cout << "Clubs " << endl;
+			cout << "clubs ";
 			break;
 		case 3:
-			cout << "Spades " << endl;
+			cout << "spades ";
 			break;
 		case 4: 
-			cout << "Hearts " << endl;
+			cout << "hearts ";
+			break;
+	}
+}
+
+string card::stringConvert()
+{
+	string converted("");
+
+	switch(face)
+	{
+		case 1:
+			converted.append("ace of ");
+			break;
+		case 2:
+			converted.append("two of ");
+			break;
+		case 3:
+			converted.append("three of ");
+			break;
+		case 4:
+			converted.append("four of ");
+			break;
+		case 5:
+			converted.append("five of ");
+			break;
+		case 6:
+			converted.append("six of ");
+			break;
+		case 7:
+			converted.append("seven of ");
+			break;
+		case 8:
+			converted.append("eight of ");
+			break;
+		case 9:
+			converted.append("nine of ");
+			break;
+		case 10:
+			converted.append("ten of ");
+			break;
+		case 11:
+			converted.append("jack of ");
+			break;
+		case 12:
+			converted.append("queen of ");
+			break;
+		case 13:
+			converted.append("king of ");
 			break;
 	}
 
-	
-}
+	switch(suit)
+	{
+		case 1:
+			converted.append("diamonds");
+			break;
+		case 2:
+			converted.append("clubs");
+			break;
+		case 3:
+			converted.append("spades");
+			break;
+		case 4: 
+			converted.append("hearts");
+			break;
+	}
 
-
-	
+	return converted;
+}	
