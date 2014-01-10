@@ -4,6 +4,8 @@
 #include "card.h"
 using namespace std;
 
+// used to test card's functionality
+
 int main()
 {
 	vector<card> deck;
