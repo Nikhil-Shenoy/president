@@ -9,17 +9,17 @@ using namespace std;
 class Player
 {
 	public:
-		Player(string Name, int ID); // trial
+		Player(string Name, int ID); // tested
 
-		void setName(string newName); // trial
-		string getName(); //trial
+		void setName(string newName); // tested
+		string getName(); //tested
 
-		void setID(int ID); //trial
-		int getID(); //trial
+		void setID(int ID); //tested
+		int getID(); //tested
 	
 		string checkTop();
-		void displayHand();
-		void playCard(card myCard);	
+		void displayHand(); //tested
+		card playCard(string myCard); //tested
 		void organizeHand();
 		void pass();
 
